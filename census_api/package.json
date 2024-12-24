@@ -1,0 +1,19 @@
+{
+  "name": "census_api",
+  "scripts": {
+    "watch": "bun build ./src/*.ts --outdir ./dist --watch --target bun",
+    "dev": "bun run --hot dist/index.js",
+    "start": "bun run dist/index.js",
+    "build": "bun build ./src/index.ts ./src/services/*.ts --outdir ./dist --target bun",
+    "type-check": "tsc --noEmit",
+    "prisma:generate": "bunx prisma generate",
+    "prisma:migrate": "bunx prisma migrate dev",
+    "prisma:studio": "bunx prisma studio"
+  },
+  "dependencies": {
+    "hono": "^4.6.14"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}
